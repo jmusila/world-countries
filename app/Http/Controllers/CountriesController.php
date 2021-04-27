@@ -7,5 +7,13 @@ use Illuminate\Http\Request;
 
 class CountriesController extends Controller
 {
-    $client = new Client();
+    /**
+     * Get the data from API
+     *
+     * @return JsonRequest
+     */
+    public function getDat()
+    {
+        
+    }
 }
