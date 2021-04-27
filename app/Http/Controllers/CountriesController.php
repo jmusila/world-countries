@@ -48,8 +48,13 @@ class CountriesController extends Controller
                 dd($resp);
                 $country_details = new Country([
                      'name' => isset($resp->name) ? $resp->name : "",
-                     'abbreviation' => isset($resp->alpha2Code) ? $resp->alpha2Code : "",
-                     'country_code' => isset($resp->callingCodes[0]) ? $resp->callingCodes[0] : ""
+                     'alpha2_code' => isset($resp->alpha2Code) ? $resp->alpha2Code : "",
+                     'alpha3_code' => isset($resp->alpha3Code) ? $resp->alpha3Code : "",
+                     'capital_city' => isset($resp->capital) ? $resp->capital : "",
+                     'sub_region' => isset($resp->subregion) ? $resp->subregion : "",
+                     'timezone' => isset($resp->timezones) ? $resp->timezones : "",
+                     'country_code' => isset($resp->callingCodes[0]) ? $resp->callingCodes[0] : "",
+                     'country_flag' => isset($resp->flag) ? $resp->flag : "",
                  ]);
      
                 $country_details->save();
