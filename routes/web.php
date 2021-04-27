@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CountriesController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,10 @@ Route::get('/', function () {
 });
 
 Route::prefix('countries')->group(function () {
-    Route::get('/all', [CountriesController::class, 'index'])->name('countries.all');
+    Route::get('/all', [CountriesController::class, 'index']);
     Route::post('/save', [CountriesController::class, 'saveCountries'])->name('countries.save');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
