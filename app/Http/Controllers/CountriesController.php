@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -12,8 +13,10 @@ class CountriesController extends Controller
      *
      * @return JsonRequest
      */
-    public function getDat()
+    public function getData()
     {
-        
+        $client = new Client();
+
+        $url = Country::getBaseUrl();
     }
 }
