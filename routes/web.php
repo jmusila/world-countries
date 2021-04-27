@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 
 Route::prefix('countries')->group(function () {
-    Route::get('/all', [CountriesController::class, 'getData'])->name('countries.all');
+    Route::get('/all', [CountriesController::class, 'index'])->name('countries.all');
+    Route::post('/save', [CountriesController::class, 'saveCountries'])->name('countries.save');
 });
