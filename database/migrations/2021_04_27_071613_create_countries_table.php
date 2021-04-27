@@ -16,9 +16,14 @@ class CreateCountriesTable extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('abbreviation')->nullable();
+            $table->string('alpha2_code')->nullable();
+            $table->string('alpha3_code')->nullable();
+            $table->string('capital_city')->nullable();
+            $table->string('region')->nullable();
+            $table->string('sub_region')->nullable();
+            $table->string('timezone')->nullable();
             $table->string('country_code')->nullable();
-            // $table->string('country_flag');
+            $table->string('country_flag')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

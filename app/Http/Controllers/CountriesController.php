@@ -45,6 +45,7 @@ class CountriesController extends Controller
 
         if (!empty($responseBody)) {
             foreach ($responseBody as $resp) {
+                dd($resp);
                 $country_details = new Country([
                      'name' => isset($resp->name) ? $resp->name : "",
                      'abbreviation' => isset($resp->alpha2Code) ? $resp->alpha2Code : "",
