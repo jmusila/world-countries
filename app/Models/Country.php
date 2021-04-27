@@ -13,4 +13,11 @@ class Country extends Model
     protected $fillable = [
         'name', 'abbreviation', 'country_code'
     ];
+
+    public static function getBaseUrl()
+    {
+        $url = "https://restcountries.eu/rest/v2/all";
+
+        return $url;
+    }
 }
