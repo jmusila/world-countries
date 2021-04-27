@@ -11,7 +11,8 @@ class Country extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'name', 'abbreviation', 'country_code'
+        'name', 'alpha2_code', 'alpha3_code', 'country_code',
+        'capital_city', 'sub_region', 'timezone', 'country_flag'
     ];
 
     public static function getBaseUrl()

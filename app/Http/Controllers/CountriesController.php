@@ -55,7 +55,6 @@ class CountriesController extends Controller
                      'country_code' => isset($resp->callingCodes[0]) ? $resp->callingCodes[0] : "",
                      'country_flag' => isset($resp->flag) ? $resp->flag : "",
                  ]);
-     
                 $country_details->save();
             }
 
