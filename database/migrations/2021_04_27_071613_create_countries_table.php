@@ -19,6 +19,7 @@ class CreateCountriesTable extends Migration
             $table->string('abbreviation')->nullable();
             $table->string('country_code')->nullable();
             // $table->string('country_flag');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
