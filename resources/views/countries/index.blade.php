@@ -8,11 +8,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <form action="/countries/save" method="POST">
         @csrf
             <div class="form-group">
-                <button type="submit" class="btn-btn-success"></button>
+                <button type="submit" class="btn btn-success"></button>
             </div>
         </form>
     </div>
