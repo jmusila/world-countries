@@ -12,7 +12,7 @@
         <form action="/countries/save" method="POST">
         @csrf
             <div class="form-group">
-                <button type="submit" class="btn btn-success"></button>
+                <button type="submit" class="btn btn-success">Save</button>
             </div>
         </form>
     </div>
